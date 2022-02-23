@@ -1,9 +1,11 @@
-const burger = document.querySelector(".header-right .fa-bars")
-const closeMenu = document.querySelector(".hamburger-menu .fa-times")
-const menu = document.querySelector(".hamburger-menu");
-burger.addEventListener ('click', function(){
-    menu.style.display = "block";
+let burger = document.querySelector('.header-right > a');
+let closeMenu = document.querySelector(".close");
+let hamburgerMenu = document.querySelector('header div.hamburger-menu');
+
+burger.addEventListener ('click', function() {
+    hamburgerMenu.classList.toggle ("active");
 });
-closeMenu.addEventListener ('click', function(){
-    menu.style.display = "none";
+closeMenu.addEventListener ('click', function() {
+    hamburgerMenu.classList.toggle ("active");
 });
+
